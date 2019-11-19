@@ -1,0 +1,2 @@
+Scaffold-DbContext "Server=tcp:peoplespledge.database.windows.net,1433;Initial Catalog=Operational;Persist Security Info=False;User ID=wagstaa;Password='/d3BZ74BzA%w#Z'V2Y$PBc36P=Re,Mu;Multipl  
+eActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -o Models -f -c PeoplesPledgeContext

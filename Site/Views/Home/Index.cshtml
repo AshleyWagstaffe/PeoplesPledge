@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to People's pledge</h1>
+    <p>Learn about Project Meerkat.</p>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Voter's Remain Pledge</h5>
+                <p class="card-text">Pledge your vote to a Candidate who will campain for Remaining in the EU</p>
+                @using (Html.BeginForm("Index", "VotePledge", null, FormMethod.Post, true, new { @id = "voterpledge-form" }))
+                {
+                    @Html.TextBox("postcode")
+                }
+
+                <a id="voterpledge-submit" href="#" class="btn btn-primary">Pledge My Vote</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Candidate's Remain Pledge</h5>
+                <p class="card-text">Register as candidate who will sign a binding pledge to campaign to Remain in the EU</p>
+                <a href="#" class="btn btn-primary">Pledge To Remain</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+        $(function () {
+            $("#voterpledge-submit").click(function () {
+                $("#voterpledge-form").submit();
+                return false;
+            });
+        });
+</script>
